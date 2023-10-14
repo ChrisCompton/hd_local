@@ -1,0 +1,12 @@
+{
+    "production": {
+        "uploadsPath": "/data/uploads",
+        "tmpPath": "/data/tmp",
+        "db": { "dialect": "sqlite", "storage": "/data/db.prod.hd.sqlite" }
+    },
+    "development": {
+        "uploadsPath": "/data/uploads",
+        "tmpPath": "/data/tmp",
+        "db": { "dialect": "sqlite", "storage": "/data/db.dev.hd.sqlite" }
+    }    
+}

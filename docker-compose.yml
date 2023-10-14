@@ -1,0 +1,22 @@
+version: '3.2'
+services:
+  hdsvc:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${CONTAINER_NAME:-hdsvc}
+    ports:
+      - "3003:3003"
+    environment:
+      - CMD_CONFIG_FILE=/config/config.json
+      - CMD_DOMAIN=localhost
+      - CMD_HOST=0.0.0.0
+      - CMD_PORT=3003
+      - CMD_URL_ADDPORT=true
+      - CMD_SESSION_SECRET="|+-+-###-->PUT_SOMETHING_NEW_HERE<--###-+-+|"
+      - CMD_SESSION_LIFE=31556926000
+      - CMD_ALLOW_ANONYMOUS=false
+      - CMD_ALLOW_ANONYMOUS_EDITS=false
+    volumes:
+      - ./data:/data
+      - ./config:/config
