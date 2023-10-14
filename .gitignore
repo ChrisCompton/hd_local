@@ -1,3 +1,8 @@
 .DS_Store
-data/uploads/*.*
+
+# Ignore database
 data/*.sqlite
+
+# ignore uploaded files
+data/uploads/*.*
+!data/uploads/.gitkeep
